@@ -1,0 +1,49 @@
+@import './variables.scss';
+
+.sidebar-container {
+  .horizontal-collapse-transition {
+    transition: 0s width ease-in-out, 0s padding-left ease-in-out,
+      0s padding-right ease-in-out;
+  }
+
+  .el-menu {
+    border: none;
+    height: 100%;
+  }
+}
+
+.sidebar {
+  ::v-deep .svg-icon {
+    width: 16px;
+    height: 16px;
+    // margin-right: 12px;
+    fill: currentColor;
+    vertical-align: middle;
+    margin-top: -1px;
+  }
+}
+
+.collapsedSidebar {
+  .el-menu-item > span {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    visibility: hidden;
+    display: inline-block;
+  }
+  .el-menu--collapse {
+    .el-sub-menu {
+      & > .el-sub-menu__title > span {
+        height: 0;
+        width: 0;
+        overflow: hidden;
+        visibility: hidden;
+        display: inline-block;
+      }
+    }
+
+    .el-sub-menu__icon-arrow {
+      display: none;
+    }
+  }
+}

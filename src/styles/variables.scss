@@ -1,0 +1,28 @@
+// sidebar
+$menuText: #bfcbd9;
+$menuActiveText: #ffffff;
+$subMenuActiveText: #f4f4f5;
+
+$menuBg: #304156;
+$menuBgHover: #263445;
+
+$subMenuBg: #1f2d3d;
+$subMenuBgHover: #001528;
+
+$sidebarWidth: 210px;
+$collapseSidebarWidth: 54px;
+$sidebarDuration: 0.5s;
+
+// 导出，与JS共享变量
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuBgHover: $menuBgHover;
+  subMenuBg: $subMenuBg;
+  subMenuBgHover: $subMenuBgHover;
+  sidebarWidth: $sidebarWidth;
+  collapseSidebarWidth: $collapseSidebarWidth;
+  sidebarDuration: $sidebarDuration;
+}
