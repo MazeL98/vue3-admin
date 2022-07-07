@@ -3,12 +3,15 @@ const path = require('path')
 function resolve(dir) {
   return path.join(__dirname, dir)
 }
+// const isDev = process.env.NODE_ENV === 'development'
 
 module.exports = {
+  publicPath: './',
   devServer: {
     proxy: {
-      '/api': {
+      [process.env.VUE_APP_BASE_API]: {
         target: 'http://127.0.0.1:3000',
+        pathRewrite: { ['^' + process.env.VUE_APP_BASE_API]: '' },
         changeOrigin: true
       }
     }
@@ -41,3 +44,17 @@ module.exports = {
       .end()
   }
 }
+
+// if (isDev) {
+//   console.log('now it is development')
+//   configuration.devServer = {
+//     proxy: {
+//       '/api/*': {
+//         target: 'http://127.0.0.1:3000',
+//         pathRewrite: { '^/api': '' },
+//         changeOrigin: true
+//       }
+//     }
+//   }
+// }
+// module.exports = configuration
