@@ -7,8 +7,8 @@
     "build": "cross-env NODE_ENV=production vue-cli-service build",
     "lint": "vue-cli-service lint",
     "prepare": "husky install",
-    "mock": "cross-env NODE_ENV=development concurrently \"vue-cli-service serve\" \"node ./src/mock/index.js\"",
-    "mocko": "cross-env NODE_ENV=development node ./src/mock/index.js"
+    "mock": "cross-env NODE_ENV=development concurrently \"vue-cli-service serve\" \"node ./mock/index.js\"",
+    "mocko": "cross-env NODE_ENV=development node ./mock/index.js"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.0.1",

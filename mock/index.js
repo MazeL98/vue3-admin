@@ -15,9 +15,6 @@ const role = require('./router/role')
 const article = require('./router/article')
 
 app.use(bodyParser.json())
-// app.get('/user', (req, res) => {
-//   res.json({ code: 200, data: 'data', success: true })
-// })
 
 // 允许跨域
 app.all('*', function (req, res, next) {
@@ -36,6 +33,7 @@ app.use('/staff-manage', staffManage)
 app.use('/permission', permission)
 app.use('/role', role)
 app.use('/article', article)
+
 app.listen(port, () => {
   console.log('Mock server is listening 3000')
 })
