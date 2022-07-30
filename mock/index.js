@@ -13,6 +13,7 @@ const staffManage = require('./router/staff-manage')
 const permission = require('./router/permission')
 const role = require('./router/role')
 const article = require('./router/article')
+const chart = require('./router/chart')
 
 app.use(bodyParser.json())
 
@@ -33,6 +34,7 @@ app.use('/staff-manage', staffManage)
 app.use('/permission', permission)
 app.use('/role', role)
 app.use('/article', article)
+app.use('/chart', chart)
 
 app.listen(port, () => {
   console.log('Mock server is listening 3000')

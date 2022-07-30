@@ -46,8 +46,7 @@ function getUserProfile(req) {
       id: '0',
       username: 'super-admin',
       title: '超级管理员',
-      avatar:
-        'https://img.freepik.com/free-vector/portrait-caucasian-woman-profile-with-long-hair-avatar-young-white-girl_102172-419.jpg',
+      avatar: 'http://rfsjnlrct.hn-bkt.clouddn.com/super-admin.png',
       permission: {
         menus: [
           'StaffManage',
@@ -75,8 +74,7 @@ function getUserProfile(req) {
       id: '1',
       username: 'admin',
       title: '普通管理员',
-      avatar:
-        'https://img.freepik.com/free-vector/portrait-strong-beautiful-woman-profile-with-blond-hair_102172-425.jpg',
+      avatar: 'http://rfsjnlrct.hn-bkt.clouddn.com/admin.png',
       permission: {
         menus: [
           'StaffManage',
@@ -99,8 +97,7 @@ function getUserProfile(req) {
       id: '2',
       username: 'test',
       title: '员工',
-      avatar:
-        'https://img.freepik.com/free-vector/portrait-african-american-woman-profile-avatar-young-black-girl_102172-418.jpg',
+      avatar: 'http://rfsjnlrct.hn-bkt.clouddn.com/test.png',
       permission: null
     }
   }

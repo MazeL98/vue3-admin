@@ -29,6 +29,15 @@ export const publicRoutes = [
         }
       },
       {
+        path: '/dashboard',
+        name: 'Dashboard',
+        component: () => import('@/views/dashboard/index'),
+        meta: {
+          title: 'dashboard',
+          icon: 'dashboard'
+        }
+      },
+      {
         path: '/404',
         name: '404',
         component: () => import('@/views/error-page/404')

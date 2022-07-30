@@ -55,15 +55,19 @@ const confirm = async () => {
 }
 
 const predefineColors = [
-  '#1C1C1C',
+  '#205072',
   '#ED784A',
   '#7D6C46',
-  '#4D5139',
   '#4A593D',
   '#405B55',
   '#08192D',
   '#3C2F41',
-  '#64363C'
+  '#64363C',
+  '#007c66',
+  '#565959',
+  '#00667F',
+  '#5960a8',
+  '#609191'
 ]
 
 const handleDefault = async () => {

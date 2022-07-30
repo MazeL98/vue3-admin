@@ -19,6 +19,7 @@ export default {
     `
   },
   route: {
+    dashboard: 'Dashboard',
     profile: 'Profile',
     staff: 'Staff',
     excelImport: 'Excel Import',
@@ -88,7 +89,7 @@ export default {
     projectIntroduction: 'Project Introduction',
     projectFeature: 'Project Feature',
     feature: 'Feature',
-    chapter: 'Chapter',
+    update: 'Update',
     author: 'Author',
     name: 'Sunday',
     job: 'A front-end development program',
@@ -179,5 +180,19 @@ export default {
     createSuccess: 'The article was created successfully',
     editorSuccess: 'Article modified successfully',
     sortSuccess: 'Article ranking modified successfully'
+  },
+  dashboard: {
+    orderTab: 'Order',
+    profitTab: 'Profit',
+    monthly: 'Monthly Revenue',
+    todayIncome: 'Today Income',
+    todayExpense: 'Today Expense',
+    todayBalance: 'Today Balance',
+    lineChartTitle: 'Revenue in the last seven days',
+    measurement: '10k CNY',
+    barChartTitle: 'Daily Profit',
+    income: 'Income',
+    expense: 'Expense',
+    balance: 'Balance'
   }
 }

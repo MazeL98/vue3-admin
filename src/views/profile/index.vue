@@ -11,8 +11,8 @@
             <el-tab-pane :label="$t('msg.profile.feature')" name="feature">
               <feature :feature="featureData"></feature>
             </el-tab-pane>
-            <el-tab-pane :label="$t('msg.profile.chapter')" name="chapter">
-              <chapter></chapter>
+            <el-tab-pane :label="$t('msg.profile.update')" name="update">
+              <update-log></update-log>
             </el-tab-pane>
             <el-tab-pane :label="$t('msg.profile.author')" name="author">
               <author></author>
@@ -28,7 +28,7 @@
 import { ref } from 'vue'
 import ProjectCard from './components/ProjectCard.vue'
 import Feature from './components/Feature.vue'
-import Chapter from './components/Chapter.vue'
+import UpdateLog from './components/UpdateLog.vue'
 import Author from './components/Author.vue'
 import { getFeature } from '@/api/app.js'
 import { watchLangSwitch } from '@/utils/i18n.js'

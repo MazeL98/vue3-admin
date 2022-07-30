@@ -57,7 +57,7 @@
 </template>
 
 <script setup>
-import { ref, onActivated, onMounted } from 'vue'
+import { ref, onActivated, onMounted, computed } from 'vue'
 import { getAllArticleList, deleteArticle } from '@/api/article.js'
 import { watchLangSwitch } from '@/utils/i18n'
 import { dynamicData, selectedLabel, tableColumns } from './dynamic'
@@ -120,7 +120,9 @@ const handleCurrentChange = (val) => {
 
 // 拖拽时的UI样式
 const store = useStore()
-const sortableColor = ref(store.getters.mainColor)
+const sortableColor = computed(() => {
+  return store.getters.mainColor
+})
 </script>
 
 <style lang="scss" scoped>

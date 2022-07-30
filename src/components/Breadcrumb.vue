@@ -17,7 +17,7 @@
 </template>
 item
 <script setup>
-import { ref, watch } from 'vue'
+import { ref, watch, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useStore } from 'vuex'
 const route = useRoute()
@@ -45,7 +45,9 @@ const handleClick = (item) => {
 }
 
 const store = useStore()
-const hoverColor = ref(store.getters.cssVar.menuBgHover)
+const hoverColor = computed(() => {
+  return store.getters.mainColor
+})
 </script>
 
 <style lang="scss" scoped>

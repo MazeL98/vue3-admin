@@ -15,6 +15,9 @@ module.exports = {
       }
     }
   },
+  configureWebpack: {
+    name: 'MazeL-Admin'
+  },
   chainWebpack(config) {
     config.module.rule('svg').exclude.add(resolve('src/icons')).end()
     config.module

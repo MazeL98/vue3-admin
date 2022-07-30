@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue'
+import { ref, watch, computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useStore } from 'vuex'
 import { watchLangSwitch } from '@/utils/i18n.js'
@@ -113,7 +113,9 @@ watchLangSwitch(() => {
 })
 
 // hover 时颜色变量
-const hoverTagColor = ref(store.getters.cssVar.menuBg)
+const hoverTagColor = computed(() => {
+  return store.getters.mainColor
+})
 </script>
 
 <style lang="scss" scoped>

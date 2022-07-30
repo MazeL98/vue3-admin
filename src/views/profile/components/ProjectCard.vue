@@ -13,7 +13,6 @@
             :height="'100px'"
             :hoverable="false"
           >
-            <p>Hello, 超级管理员</p>
           </pan-thumb>
         </div>
         <div class="box-center">

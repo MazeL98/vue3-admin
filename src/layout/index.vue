@@ -4,7 +4,7 @@
     <sidebar
       id="guide-sidebar"
       class="sidebar-container"
-      :style="{ backgroundColor: $store.getters.cssVar.menuBg }"
+      :style="{ backgroundColor: $store.getters.mainColor }"
     />
     <div class="main-container">
       <div class="fixed-header">
@@ -31,6 +31,7 @@ const toggleSidebarWidth = () => {
     return ['collapsedSidebar']
   }
 }
+console.log(store.getters.cssVar)
 </script>
 
 <style lang="scss" scoped>

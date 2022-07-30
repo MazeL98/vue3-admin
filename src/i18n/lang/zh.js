@@ -19,6 +19,7 @@ export default {
     `
   },
   route: {
+    dashboard: '仪表盘',
     profile: '个人中心',
     staff: '员工',
     excelImport: 'Excel导入',
@@ -88,7 +89,7 @@ export default {
     projectIntroduction: '项目介绍',
     projectFeature: '项目功能',
     feature: '功能',
-    chapter: '章节',
+    update: '更新',
     author: '作者',
     name: 'Sunday',
     job: '一个前端开发程序猿',
@@ -179,5 +180,19 @@ export default {
     createSuccess: '文章创建成功',
     editorSuccess: '文章修改成功',
     sortSuccess: '文章排名修改成功'
+  },
+  dashboard: {
+    orderTab: '订单',
+    profitTab: '收益',
+    monthly: '月度累计收益',
+    todayIncome: '今日收入',
+    todayExpense: '今日支出',
+    todayBalance: '今日结余',
+    lineChartTitle: '近7日营收情况',
+    measurement: '万元',
+    barChartTitle: '日营收详情',
+    income: '收入',
+    expense: '支出',
+    balance: '结余'
   }
 }

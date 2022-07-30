@@ -2,19 +2,15 @@
 <template>
   <div class="sidebar">
     <div class="logo-container">
-      <el-avatar
-        shape="circle"
-        size="large"
-        :src="$store.getters.userInfo.avatar"
-      ></el-avatar>
+      <img src="@/assets/img/M.png" class="logo" />
       <div v-if="$store.getters.sidebarOpened" class="logo-title">
-        mazel-admin
+        MazeL-Admin
       </div>
     </div>
     <el-scrollbar>
       <el-menu
         :unique-opened="true"
-        :background-color="$store.getters.cssVar.menuBg"
+        :background-color="$store.getters.mainColor"
         :text-color="$store.getters.cssVar.menuText"
         :active-text-color="$store.getters.cssVar.menuActiveText"
         :collapse="!$store.getters.sidebarOpened"
@@ -53,11 +49,15 @@ const activeItem = computed(() => {
 @import '@/styles/sidebar.scss';
 
 .logo-container {
-  height: 40px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px 0 8px;
+  padding: 30px 0 30px;
+}
+.logo {
+  width: 30px;
+  height: 30px;
 }
 
 .logo-title {
