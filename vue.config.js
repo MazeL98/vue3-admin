@@ -1,4 +1,5 @@
 const path = require('path')
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
 function resolve(dir) {
   return path.join(__dirname, dir)
@@ -16,7 +17,8 @@ module.exports = {
     }
   },
   configureWebpack: {
-    name: 'MazeL-Admin'
+    name: 'MazeL-Admin',
+    plugins: [new BundleAnalyzerPlugin()]
   },
   chainWebpack(config) {
     config.module.rule('svg').exclude.add(resolve('src/icons')).end()

@@ -1,65 +1,65 @@
 <template>
   <div class="login-container">
-    <el-form
-      class="login-form"
-      :model="loginForm"
-      :rules="loginRules"
-      :loading="loading"
-      ref="formRef"
-    >
-      <div class="title-container">
-        <div class="title">{{ $t('msg.login.title') }}</div>
-        <lang-select class="login-lang-select"></lang-select>
-      </div>
-      <el-form-item class="login-form-item" prop="username">
-        <span class="icon-container">
-          <svg-icon icon="user"></svg-icon>
-        </span>
-        <el-input
-          placeholder="username"
-          name="username"
-          type="text"
-          v-model="loginForm.username"
-        ></el-input>
-      </el-form-item>
-
-      <el-form-item class="login-form-item" prop="password">
-        <span class="icon-container">
-          <svg-icon icon="password"></svg-icon>
-        </span>
-        <el-input
-          placeholder="password"
-          name="password"
-          :type="passwordType"
-          v-model="loginForm.password"
-          ref="pwdInput"
-        ></el-input>
-        <span class="show-pwd" @click="onChangePasswordType">
-          <svg-icon
-            :icon="passwordType === 'password' ? 'eye' : 'eye-open'"
-          ></svg-icon>
-        </span>
-      </el-form-item>
-      <el-button
-        type="primary"
-        style="width: 100%; margin-bottom: 30px"
-        @click="handleLogin(formRef)"
-        >{{ $t('msg.login.loginBtn') }}</el-button
+    <el-card class="card-container" shadow="always">
+      <el-form
+        class="login-form"
+        :model="loginForm"
+        :rules="loginRules"
+        :loading="loading"
+        ref="formRef"
       >
-    </el-form>
+        <div class="avatar-container">
+          <user class="login-avatar"></user>
+        </div>
+        <div class="title-container">
+          <div class="title">{{ $t('msg.login.title') }}</div>
+          <lang-select class="login-lang-select"></lang-select>
+        </div>
+        <el-form-item class="login-form-item" prop="username">
+          <el-input
+            placeholder="Username"
+            name="username"
+            type="text"
+            v-model="loginForm.username"
+          ></el-input>
+        </el-form-item>
+
+        <el-form-item class="login-form-item" prop="password">
+          <el-input
+            placeholder="Password"
+            name="password"
+            :type="passwordType"
+            v-model="loginForm.password"
+            ref="pwdInput"
+          ></el-input>
+          <span class="show-pwd" @click="onChangePasswordType">
+            <svg-icon
+              :icon="passwordType === 'password' ? 'eye' : 'eye-open'"
+            ></svg-icon>
+          </span>
+        </el-form-item>
+        <el-button
+          type="primary"
+          style="width: 100%; margin-bottom: 30px"
+          @click="handleLogin(formRef)"
+          >{{ $t('msg.login.loginBtn') }}</el-button
+        >
+      </el-form>
+    </el-card>
+
     <div class="login-desc" v-html="$t('msg.login.desc')"></div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { validatePassword } from '@/utils/validate.js'
 import { useStore } from 'vuex'
 import router from '@/router'
 import { setTimeStamp } from '@/utils/auth.js'
 import { useI18n } from 'vue-i18n'
 import LangSelect from '@/components/LangSelect.vue'
-
+import { User } from '@element-plus/icons-vue'
 const loginForm = ref({
   username: 'super-admin',
   password: '123456'
@@ -118,34 +118,59 @@ const handleLogin = (formEl) => {
         })
     }
   })
-
-  // 触发登录请求
 }
+// 主题色
+const mainColor = computed(() => {
+  return store.getters.mainColor
+})
 </script>
 
 <style lang="scss" scoped>
-$loginBg: #2d3a4b;
-$dark_gray: #889aa4;
-$light_gray: #eee;
-$cursor: #fff;
+$title_color: v-bind(mainColor);
 
 .login-container {
-  background: $loginBg;
+  background: #f9f9fd;
   width: 100%;
   min-height: 100%;
   overflow: hidden;
 }
+
+.card-container {
+  width: 350px;
+  margin: 150px auto 30px;
+  border-radius: 8px;
+  ::v-deep .el-card__body {
+    padding: 20px 35px;
+  }
+}
+
 .login-form {
   position: relative;
-  width: 520px;
-  margin: 0 auto;
-  padding: 150px 30px 0;
+  width: 100%;
+  text-align: center;
 
+  .avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: $title_color;
+
+    .login-avatar {
+      color: white;
+      width: 25px;
+      height: 25px;
+    }
+  }
   .title-container {
     position: relative;
     width: 100%;
     text-align: center;
-    color: $light_gray;
+    color: $title_color;
     padding-bottom: 30px;
 
     .login-lang-select {
@@ -153,7 +178,7 @@ $cursor: #fff;
       top: 0;
       right: 0;
       ::v-deep .language-icon {
-        font-size: 20px;
+        font-size: 18px;
         padding: 2px;
         background-color: #fff;
         border-radius: 3px;
@@ -161,44 +186,38 @@ $cursor: #fff;
       }
     }
     .title {
-      font-size: 24px;
-      font-weight: bold;
+      font-size: 16px;
+      font-weight: 600;
     }
   }
 
   .el-form-item {
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-    background: rgba(0, 0, 0, 0.2);
-    color: $dark_gray;
+    border-radius: 4px;
+    background: #f2f2f2;
+    margin-bottom: 30px;
 
     .el-input {
       display: inline-block;
-      height: 47px;
-      width: 85%;
+      height: 40px;
+      width: 90%;
+      font-size: 16px;
 
       ::v-deep input {
         background-color: transparent;
         border: none;
-        padding: 10px 5px 12px 15px;
+        letter-spacing: 0.5px;
+        padding: 12px 5px 12px 0px;
         vertical-align: middle;
-        color: $light_gray;
-        caret-color: $cursor;
+        color: $title_color;
+        caret-color: $title_color;
       }
     }
   }
 
-  .icon-container {
-    padding: 7px 5px 6px 15px;
-    vertical-align: middle;
-    display: inline-block;
-    font-size: 16px;
-  }
-
   .show-pwd {
     position: absolute;
-    right: 20px;
-    top: 7px;
+    right: 15px;
     font-size: 16px;
     cursor: pointer;
     user-select: none;
@@ -206,9 +225,10 @@ $cursor: #fff;
 }
 
 .login-desc {
-  color: white;
-  font-size: 16px;
-  line-height: 24px;
-  text-align: center;
+  margin-left: 100px;
+  color: $title_color;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
 }
 </style>

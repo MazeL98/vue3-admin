@@ -50,7 +50,7 @@ const option = {
   yAxis: {
     type: 'value',
     min: 20,
-    max: 80
+    max: 90
   },
   axisPointer: {
     show: true,

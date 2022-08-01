@@ -23,7 +23,8 @@ const barChartRef = ref(null)
 let barChart
 const option = {
   title: {
-    text: i18n.t('msg.dashboard.barChartTitle')
+    text: i18n.t('msg.dashboard.barChartTitle'),
+    top: '15'
   },
   color: ['#56C596', '#329D9C', '#205072'],
 
@@ -37,10 +38,13 @@ const option = {
   legend: {
     // data: ['Profit', 'Expenses', 'Income'],
     formatter: '{name}' + ' (' + i18n.t('msg.dashboard.measurement') + ')',
-    right: 20
+    right: '20',
+    top: '15'
   },
   grid: {
-    left: '60'
+    top: '80',
+    left: '70',
+    bottom: '25'
   },
   xAxis: [
     {
@@ -60,6 +64,7 @@ const option = {
     {
       name: i18n.t('msg.dashboard.income'),
       type: 'bar',
+      barWidth: '17',
       stack: 'Total',
       label: {
         show: true,
@@ -73,6 +78,8 @@ const option = {
     {
       name: i18n.t('msg.dashboard.expense'),
       type: 'bar',
+      barWidth: '17',
+
       stack: 'Total',
       label: {
         show: true,
@@ -86,6 +93,8 @@ const option = {
     {
       name: i18n.t('msg.dashboard.balance'),
       type: 'bar',
+      barWidth: '17',
+
       label: {
         show: true,
         position: 'inside'

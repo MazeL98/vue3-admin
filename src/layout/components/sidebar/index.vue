@@ -2,9 +2,9 @@
 <template>
   <div class="sidebar">
     <div class="logo-container">
-      <img src="@/assets/img/M.png" class="logo" />
+      <img src="@/assets/img/M-logo.png" class="logo" />
       <div v-if="$store.getters.sidebarOpened" class="logo-title">
-        MazeL-Admin
+        Mazel-Admin
       </div>
     </div>
     <el-scrollbar>
@@ -37,7 +37,6 @@ const routes = computed(() => {
   const filteredRoutes = filterRoutes(router.getRoutes())
   return generateRoutes(filteredRoutes)
 })
-
 const route = useRoute()
 const activeItem = computed(() => {
   const { path } = route
@@ -47,6 +46,7 @@ const activeItem = computed(() => {
 
 <style lang="scss" scoped>
 @import '@/styles/sidebar.scss';
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400&display=swap');
 
 .logo-container {
   height: 30px;
@@ -62,8 +62,10 @@ const activeItem = computed(() => {
 
 .logo-title {
   margin-left: 15px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
+  font-family: 'IBM Plex Sans', sans-serif;
+  letter-spacing: 0.4px;
   color: white;
   white-space: nowrap;
 }

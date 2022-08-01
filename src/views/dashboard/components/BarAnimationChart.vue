@@ -23,7 +23,6 @@ for (let i = 0; i < 90; i++) {
   data1.push((Math.sin(i / 5) * (i / 5 - 10) + i / 6) * 5)
   data2.push((Math.cos(i / 5) * (i / 5 - 10) + i / 6) * 5)
 }
-console.log(data1)
 const echartInit = () => {
   barAnimationChart = echarts.init(barAnimationRef.value)
   const option = {

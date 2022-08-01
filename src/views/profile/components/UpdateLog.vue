@@ -1,10 +1,10 @@
 <!--  -->
 <template>
   <el-timeline class="timeline-container">
-    <el-timeline-item center timestamp="2022/7/16" placement="top">
+    <el-timeline-item center timestamp="2022/7/19" placement="top">
       <el-card>
-        <h4>更新Logo</h4>
-        <p>待更新</p>
+        <h4>更新Logo与英文字体</h4>
+        <p>自制Logo，更换网站标题字体，更换页面中的英文字体</p>
       </el-card>
     </el-timeline-item>
     <el-timeline-item center timestamp="2022/7/15" placement="top">

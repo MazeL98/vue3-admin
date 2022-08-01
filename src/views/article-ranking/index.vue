@@ -93,7 +93,6 @@ const onShowArticle = (row) => {
 
 const i18n = useI18n()
 const onRemove = (row) => {
-  console.log(row._id)
   ElMessageBox.confirm(
     i18n.t('msg.article.dialogTitle1') +
       row.title +

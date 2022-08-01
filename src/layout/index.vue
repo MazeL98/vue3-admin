@@ -31,7 +31,6 @@ const toggleSidebarWidth = () => {
     return ['collapsedSidebar']
   }
 }
-console.log(store.getters.cssVar)
 </script>
 
 <style lang="scss" scoped>
@@ -59,7 +58,7 @@ console.log(store.getters.cssVar)
 
 .collapsedSidebar {
   .sidebar-container {
-    width: 54px !important;
+    width: 64px !important;
   }
 
   .fixed-header {

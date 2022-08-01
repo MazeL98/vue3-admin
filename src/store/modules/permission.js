@@ -17,11 +17,7 @@ const actions = {
     menus.forEach((key) => {
       routes.push(...privateRoutes.filter((item) => item.name === key))
     })
-    // 把404页面也加进去
-    routes.push({
-      path: '/:catchAll(.*)',
-      redirect: '/404'
-    })
+
     commit('setRoutes', routes)
     return routes
   }

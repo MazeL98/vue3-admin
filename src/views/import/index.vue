@@ -16,9 +16,7 @@ import { useI18n } from 'vue-i18n'
 const router = useRouter()
 const i18n = useI18n()
 const onSuccess = async ({ header, results }) => {
-  console.log(results)
   const updateData = generateData(results)
-  console.log(updateData)
   await staffBatchImport(updateData)
   ElMessage.success(results.length + i18n.t('msg.excel.importSuccess'))
   router.push('/staff/manage')

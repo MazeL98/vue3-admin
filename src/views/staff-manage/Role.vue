@@ -59,7 +59,6 @@ const onConfirm = async () => {
     rolesObj[role.id] = role.title
   })
   await updateRole(props.staffId, rolesObj)
-  console.log()
   ElMessage.success(i18n.t('msg.role.updateRoleSuccess'))
   // 通知父组件，更新列表信息
   emits('updateRole')

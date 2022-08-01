@@ -150,8 +150,6 @@ const getTimePointData = async (date) => {
 // 监听日历点击事件
 const onCalendarClick = (date) => {
   getTimePointData(date)
-  console.log('点击日历')
-  console.log(date)
 }
 </script>
 
@@ -171,7 +169,7 @@ const onCalendarClick = (date) => {
     margin: 20px 0 0 20px;
 
     .overview {
-      margin-left: 10px;
+      margin-left: 7px;
       .overview-title {
         font-size: 14px;
         color: #818181;
@@ -179,6 +177,7 @@ const onCalendarClick = (date) => {
       .overview-amount {
         font-size: 34px;
         font-weight: 600;
+        margin-left: -3px;
       }
     }
   }
@@ -239,7 +238,7 @@ const onCalendarClick = (date) => {
 
 // 日历
 .calendar-container {
-  height: 57vh;
+  height: 65vh;
 
   .calendar {
     ::v-deep .el-calendar-day {
@@ -285,25 +284,12 @@ const onCalendarClick = (date) => {
       padding-left: 0;
       padding-right: 0;
     }
-    // // 隐藏日历中的下个月份
-    // ::v-deep .el-calendar-table:not(.is-range) td.prev {
-    //   visibility: hidden;
-    // }
-    // ::v-deep .el-calendar-table:not(.is-range) td.next {
-    //   visibility: hidden;
-    // }
-    // ::v-deep .prev > .el-calendar-day > p {
-    //   display: none;
-    // }
-    // ::v-deep .next > .el-calendar-day > p {
-    //   display: none;
-    // }
   }
 }
 
 // 正负柱状图
 .bar-chart-container {
-  height: 57vh;
+  height: 65vh;
   ::v-deep .el-card__body {
     padding: 0 20px;
   }

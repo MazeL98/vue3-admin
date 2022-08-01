@@ -58,7 +58,6 @@ watchLangSwitch(() => {
   mkEditor.destroy()
   initEditor()
   mkEditor.setHTML(htmlString)
-  console.log(htmlString)
 })
 
 // 提交文章内容，区分两种情况：新建 or 编辑

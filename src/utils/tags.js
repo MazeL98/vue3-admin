@@ -1,6 +1,6 @@
 import i18n from '@/i18n'
 
-const whiteList = ['/', '/404', '/401', '/import', '/login']
+const whiteList = ['/', '/import', '/login']
 
 export function isTag(path) {
   return !whiteList.includes(path)

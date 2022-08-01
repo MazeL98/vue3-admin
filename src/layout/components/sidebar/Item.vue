@@ -1,11 +1,14 @@
 <!--  -->
 <template>
   <svg-icon :icon="icon"></svg-icon>
-  <span> {{ $t('msg.route.' + title) }} </span>
+  <span :style="{ fontSize: titleSize }">
+    {{ $t('msg.route.' + title) }}
+  </span>
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
+import { defineProps, computed } from 'vue'
+import { useStore } from 'vuex'
 defineProps({
   title: {
     type: String,
@@ -16,10 +19,19 @@ defineProps({
     required: true
   }
 })
+const store = useStore()
+const titleSize = computed(() => {
+  if (store.getters.language === 'zh') {
+    return '14px'
+  } else {
+    return '16px'
+  }
+})
 </script>
 
 <style lang="scss" scoped>
 span {
-  margin-left: 12px;
+  font-size: 16px;
+  margin-left: 10px;
 }
 </style>
