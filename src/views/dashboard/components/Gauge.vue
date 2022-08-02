@@ -5,8 +5,13 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import * as echarts from 'echarts'
+import * as echarts from 'echarts/core'
+import { TitleComponent, LegendComponent } from 'echarts/components'
+import { GaugeChart } from 'echarts/charts'
+import { CanvasRenderer } from 'echarts/renderers'
 import option from './customOption'
+echarts.use([TitleComponent, LegendComponent, GaugeChart, CanvasRenderer])
+
 const gaugeRef = ref(null)
 let gaugeChart
 

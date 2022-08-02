@@ -7,9 +7,36 @@
 
 <script setup>
 import { ref, onMounted, defineProps, watch } from 'vue'
-import * as echarts from 'echarts'
+import * as echarts from 'echarts/core'
+import { BarChart } from 'echarts/charts'
+
+import { CanvasRenderer } from 'echarts/renderers'
+import {
+  TitleComponent,
+  TooltipComponent,
+  GridComponent,
+  DatasetComponent,
+  TransformComponent,
+  LegendComponent
+} from 'echarts/components'
+// 标签自动布局，全局过渡动画等特性
+import { LabelLayout, UniversalTransition } from 'echarts/features'
 import { useI18n } from 'vue-i18n'
 import { watchLangSwitch } from '@/utils/i18n.js'
+
+// 注册必须的组件
+echarts.use([
+  TitleComponent,
+  TooltipComponent,
+  GridComponent,
+  DatasetComponent,
+  LegendComponent,
+  TransformComponent,
+  BarChart,
+  LabelLayout,
+  UniversalTransition,
+  CanvasRenderer
+])
 
 const props = defineProps({
   barChartData: {
@@ -36,7 +63,6 @@ const option = {
     valueFormatter: (value) => value.toFixed(0) + ' （万元）'
   },
   legend: {
-    // data: ['Profit', 'Expenses', 'Income'],
     formatter: '{name}' + ' (' + i18n.t('msg.dashboard.measurement') + ')',
     right: '20',
     top: '15'

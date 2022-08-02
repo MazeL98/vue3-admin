@@ -11,7 +11,7 @@ import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import installSvgIcons from './icons/index.js'
 
 // 引入 echarts.js
-import * as echarts from 'echarts'
+// import * as echarts from 'echarts'
 
 // 时间戳转换过滤器
 import installFilter from '@/filter'
@@ -30,5 +30,5 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 }
 installSvgIcons(app)
 installDirective(app)
-app.config.globalProperties.echarts = echarts
+// app.config.globalProperties.echarts = echarts
 app.use(store).use(router).use(i18n).mount('#app')

@@ -8,9 +8,30 @@
 <script setup>
 // import { defineProps } from 'vue'
 import { ref, onMounted, defineProps } from 'vue'
-import * as echarts from 'echarts'
+import * as echarts from 'echarts/core'
+import { LineChart } from 'echarts/charts'
+import { UniversalTransition } from 'echarts/features'
+import { CanvasRenderer } from 'echarts/renderers'
+import {
+  TitleComponent,
+  ToolboxComponent,
+  TooltipComponent,
+  GridComponent,
+  LegendComponent
+} from 'echarts/components'
 import { useI18n } from 'vue-i18n'
 import { watchLangSwitch } from '@/utils/i18n.js'
+echarts.use([
+  TitleComponent,
+  ToolboxComponent,
+  TooltipComponent,
+  GridComponent,
+  LegendComponent,
+  LineChart,
+  CanvasRenderer,
+  UniversalTransition
+])
+
 const props = defineProps({
   lineData: {
     required: true
