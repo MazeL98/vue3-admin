@@ -1,5 +1,8 @@
 const path = require('path')
+// 分析打包后各个包大小
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+// gzip压缩配置
+const compressionWebpackPlugin = require('compression-webpack-plugin')
 
 function resolve(dir) {
   return path.join(__dirname, dir)
@@ -18,7 +21,17 @@ module.exports = {
   },
   configureWebpack: {
     name: 'MazeL-Admin',
-    plugins: [new BundleAnalyzerPlugin()]
+    plugins: [
+      new BundleAnalyzerPlugin(),
+      new compressionWebpackPlugin({
+        filename: '[path].gz[query]',
+        algorithm: 'gzip',
+        test: /\.(js|css|svg)$/,
+        threshold: 10240,
+        minRatio: 0.8,
+        deleteOriginalAssets: false
+      })
+    ]
   },
   chainWebpack(config) {
     config.module.rule('svg').exclude.add(resolve('src/icons')).end()
