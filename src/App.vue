@@ -17,6 +17,10 @@ watchLangSwitch(() => {
     store.dispatch('user/getUserInfo')
   }
 })
+
+if (document.getElementById('Loading')) {
+  document.getElementById('Loading').remove()
+}
 </script>
 
 <style></style>

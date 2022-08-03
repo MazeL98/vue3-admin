@@ -56,7 +56,7 @@ module.exports = {
     externals: {
       vue: 'Vue',
       'element-plus': 'ElementPlus',
-      xlsx: 'xlsx',
+      xlsx: 'XLSX',
       echarts: 'echarts'
     }
   },

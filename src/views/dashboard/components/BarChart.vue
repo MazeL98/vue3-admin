@@ -50,8 +50,7 @@ const barChartRef = ref(null)
 let barChart
 const option = {
   title: {
-    text: i18n.t('msg.dashboard.barChartTitle'),
-    top: '15'
+    text: i18n.t('msg.dashboard.barChartTitle')
   },
   color: ['#56C596', '#329D9C', '#205072'],
 
@@ -64,13 +63,12 @@ const option = {
   },
   legend: {
     formatter: '{name}' + ' (' + i18n.t('msg.dashboard.measurement') + ')',
-    right: '20',
-    top: '15'
+    right: '20'
   },
   grid: {
-    top: '80',
+    top: '45',
     left: '70',
-    bottom: '25'
+    bottom: '20'
   },
   xAxis: [
     {

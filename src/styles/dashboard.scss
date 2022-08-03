@@ -82,7 +82,7 @@
 
 // 日历
 .calendar-container {
-  height: 65vh;
+  height: 62vh;
   .el-card__body {
     padding-top: 10px;
   }
@@ -98,6 +98,11 @@
   }
 
   .el-calendar-table {
+    thead {
+      th {
+        padding: 7px 0;
+      }
+    }
     .el-calendar-day {
       padding: 0px;
       height: 60px !important;
@@ -139,7 +144,7 @@
 
 // 正负柱状图
 .bar-chart-container {
-  height: 65vh;
+  height: 62vh;
   ::v-deep(.el-card__body) {
     padding: 0 20px;
   }
