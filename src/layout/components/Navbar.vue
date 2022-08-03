@@ -24,7 +24,7 @@
           <div class="avatar-wrapper">
             <el-avatar
               shape="circle"
-              size="large"
+              :size="40"
               :src="$store.getters.userInfo.avatar"
             ></el-avatar>
           </div>

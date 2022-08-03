@@ -4,12 +4,12 @@
     <el-card class="excel-card">
       <el-button
         type="primary"
-        size="small"
+        size="default"
         @click="handleRedirect"
         v-permission="['ImportStaff']"
         >{{ $t('msg.excel.importExcel') }}</el-button
       >
-      <el-button type="success" size="small" @click.stop="handleExport">{{
+      <el-button type="success" size="default" @click.stop="handleExport">{{
         $t('msg.excel.exportExcel')
       }}</el-button>
     </el-card>
@@ -40,7 +40,7 @@
                 type="success"
                 v-for="value in row.role"
                 :key="value"
-                size="mini"
+                size="small"
                 >{{ value }}</el-tag
               >
             </div>
@@ -59,19 +59,19 @@
           fixed="right"
         >
           <template #default="{ row }">
-            <el-button type="primary" size="mini" @click="showInfo(row._id)">{{
+            <el-button type="primary" size="small" @click="showInfo(row._id)">{{
               $t('msg.excel.show')
             }}</el-button>
             <el-button
               type="info"
-              size="mini"
+              size="small"
               @click="showRole(row)"
               v-permission="['DistributeRole']"
               >{{ $t('msg.excel.showRole') }}</el-button
             >
             <el-button
               type="danger"
-              size="mini"
+              size="small"
               @click="removeStaff(row)"
               v-permission="['RemoveStaff']"
               >{{ $t('msg.excel.remove') }}</el-button

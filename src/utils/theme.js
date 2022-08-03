@@ -64,6 +64,7 @@ const getOriginalStyle = async () => {
 const getStyleTemplate = (data) => {
   const colorMap = {
     '#3a8ee6': 'shade-1',
+    '#337ecc': 'primary',
     '#409eff': 'primary',
     '#0d84ff': 'primary',
     '#53a8ff': 'light-1',

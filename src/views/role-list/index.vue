@@ -17,7 +17,7 @@
           <template #default="{ row }">
             <el-button
               type="primary"
-              size="mini"
+              size="small"
               class="permission-button"
               @click="onDistribute(row)"
               v-permission="['DistributePermission']"

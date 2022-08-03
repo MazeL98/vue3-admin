@@ -6,9 +6,7 @@ import i18n from '@/i18n'
 export const tableRef = ref(null)
 
 export const initSortable = (tableData, cb) => {
-  const el = tableRef.value.$el.querySelectorAll(
-    '.el-table__body-wrapper > table > tbody'
-  )[0]
+  const el = tableRef.value.$el.querySelectorAll('.el-table__body > tbody')[0]
   Sortable.create(el, {
     ghostClass: 'sortable-ghost',
     async onEnd(event) {

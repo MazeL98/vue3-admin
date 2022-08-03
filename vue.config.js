@@ -52,7 +52,11 @@ module.exports = {
         minRatio: 0.8,
         deleteOriginalAssets: false
       })
-    ]
+    ],
+    externals: {
+      vue: 'Vue',
+      'element-plus': 'ElementPlus'
+    }
   },
   chainWebpack(config) {
     config.module.rule('svg').exclude.add(resolve('src/icons')).end()
