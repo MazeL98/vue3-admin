@@ -60,7 +60,7 @@ const onDistribute = (row) => {
 
 <style lang="scss" scoped>
 .role-list-table {
-  ::v-deep .el-table__cell {
+  ::v-deep(.el-table__cell) {
     padding: 8px 0;
     & .cell {
       padding-left: 15px;

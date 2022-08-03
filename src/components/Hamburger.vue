@@ -29,7 +29,7 @@ const handleClick = () => {
   &:hover {
     background-color: rgba(0, 0, 0, 0.1);
   }
-  ::v-deep .hamburger-icon {
+  ::v-deep(.hamburger-icon) {
     width: 20px;
     height: 20px;
     fill: currentColor;

@@ -46,7 +46,6 @@ const activeItem = computed(() => {
 
 <style lang="scss" scoped>
 @import '@/styles/sidebar.scss';
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400&display=swap');
 
 .logo-container {
   height: 30px;
@@ -64,7 +63,7 @@ const activeItem = computed(() => {
   margin-left: 15px;
   font-size: 20px;
   font-weight: 600;
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'IBMPlexSans', sans-serif;
   letter-spacing: 0.4px;
   color: white;
   white-space: nowrap;

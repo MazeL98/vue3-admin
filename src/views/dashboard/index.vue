@@ -227,7 +227,7 @@ const onCalendarClick = (date) => {
 // 整体布局
 .dashboard-container {
   .el-card {
-    ::v-deep .el-card__body {
+    ::v-deep(.el-card__body) {
       padding-top: 20px;
     }
   }
@@ -241,7 +241,7 @@ const onCalendarClick = (date) => {
   height: 65vh;
 
   .calendar {
-    ::v-deep .el-calendar-day {
+    ::v-deep(.el-calendar-day) {
       padding: 0px;
       height: 60px !important;
       p {
@@ -277,10 +277,10 @@ const onCalendarClick = (date) => {
         background-color: #d6f2ff;
       }
     }
-    ::v-deep .el-calendar__body {
+    ::v-deep(.el-calendar__body) {
       padding: 0;
     }
-    ::v-deep .el-calendar__header {
+    ::v-deep(.el-calendar__header) {
       padding-left: 0;
       padding-right: 0;
     }
@@ -290,7 +290,7 @@ const onCalendarClick = (date) => {
 // 正负柱状图
 .bar-chart-container {
   height: 65vh;
-  ::v-deep .el-card__body {
+  ::v-deep(.el-card__body) {
     padding: 0 20px;
   }
 }

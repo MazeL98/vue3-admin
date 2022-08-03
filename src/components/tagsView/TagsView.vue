@@ -152,7 +152,7 @@ const hoverTagColor = computed(() => {
   .close-icon-wrapper {
     line-height: 26px;
     position: relative;
-    ::v-deep .icon-wrapper {
+    ::v-deep(.icon-wrapper) {
       display: inline-block;
       position: relative;
       top: 2px;

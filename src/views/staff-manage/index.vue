@@ -191,7 +191,7 @@ watch(roleVisible, (val) => {
     text-align: right;
   }
 
-  ::v-deep .el-tag {
+  ::v-deep(.el-tag) {
     margin-right: 5px;
   }
 }

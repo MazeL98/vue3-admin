@@ -26,7 +26,7 @@ defineProps({
 
 <style lang="scss" scoped>
 .feature-collapse {
-  ::v-deep .el-collapse-item__header {
+  ::v-deep(.el-collapse-item__header) {
     font-weight: 600;
   }
 }

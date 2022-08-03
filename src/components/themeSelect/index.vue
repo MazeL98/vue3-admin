@@ -34,7 +34,7 @@ const handleThemeSelect = () => {
 
 <style lang="scss" scoped>
 .select-color-container {
-  ::v-deep .el-dialog {
+  ::v-deep(.el-dialog) {
     z-index: 999;
   }
 }

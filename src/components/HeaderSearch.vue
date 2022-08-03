@@ -123,7 +123,7 @@ const onSelectChange = (value) => {
   overflow: hidden;
   vertical-align: middle;
 
-  ::v-deep .el-input__inner {
+  ::v-deep(.el-input__inner) {
     outline: none;
     height: 30px;
     border: 0;
@@ -135,7 +135,7 @@ const onSelectChange = (value) => {
 }
 
 .show {
-  ::v-deep .header-search-select {
+  ::v-deep(.header-search-select) {
     width: 210px;
     margin-left: 10px;
   }

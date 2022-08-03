@@ -37,7 +37,7 @@
   p {
     margin-bottom: 7px;
   }
-  ::v-deep .el-timeline-item__timestamp {
+  ::v-deep(.el-timeline-item__timestamp) {
     margin: 18px 0 10px 4px;
   }
 }

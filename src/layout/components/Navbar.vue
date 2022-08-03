@@ -99,20 +99,20 @@ const logout = () => {
     }
 
     .guide {
-      ::v-deep .guide-icon {
+      ::v-deep(.guide-icon) {
         font-size: 24px;
         vertical-align: middle;
       }
     }
 
     .header-search {
-      ::v-deep .header-search-icon {
+      ::v-deep(.header-search-icon) {
         font-size: 20px;
         vertical-align: middle;
       }
     }
     .fullscreen {
-      ::v-deep .fullscreen-icon {
+      ::v-deep(.fullscreen-icon) {
         font-size: 24px;
 
         vertical-align: middle;
@@ -120,13 +120,13 @@ const logout = () => {
       }
     }
     .theme-select {
-      ::v-deep .theme-change-icon {
+      ::v-deep(.theme-change-icon) {
         font-size: 24px;
         vertical-align: middle;
       }
     }
     .lang-select {
-      ::v-deep .language-icon {
+      ::v-deep(.language-icon) {
         font-size: 24px;
         vertical-align: middle;
       }
@@ -135,11 +135,11 @@ const logout = () => {
     .profile {
       margin: 5px 10px 5px 0px;
 
-      ::v-deep .avatar-wrapper {
+      ::v-deep(.avatar-wrapper) {
         .el-avatar {
           margin-right: 10px;
         }
-        ::v-deep .el-icon {
+        ::v-deep(.el-icon) {
           vertical-align: bottom;
         }
       }

@@ -126,14 +126,14 @@ const sortableColor = computed(() => {
 
 <style lang="scss" scoped>
 .article-ranking-table {
-  ::v-deep .el-table__cell {
+  ::v-deep(.el-table__cell) {
     padding: 10px 0;
     & .cell {
       padding-left: 20px;
     }
   }
 
-  ::v-deep .sortable-ghost {
+  ::v-deep(.sortable-ghost) {
     opacity: 0.5;
     color: #fff !important;
     background: v-bind(sortableColor);

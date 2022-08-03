@@ -60,7 +60,7 @@ if (articleId) {
 .article-create-container {
   .title-input {
     margin-bottom: 25px;
-    ::v-deep .el-input__inner {
+    ::v-deep(.el-input__inner) {
       font-size: 16px;
       border: 0;
       padding-left: 3px;

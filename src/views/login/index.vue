@@ -139,7 +139,7 @@ $title_color: v-bind(mainColor);
   width: 350px;
   margin: 150px auto 30px;
   border-radius: 8px;
-  ::v-deep .el-card__body {
+  ::v-deep(.el-card__body) {
     padding: 20px 35px;
   }
 }
@@ -177,7 +177,7 @@ $title_color: v-bind(mainColor);
       position: absolute;
       top: 0;
       right: 0;
-      ::v-deep .language-icon {
+      ::v-deep(.language-icon) {
         font-size: 18px;
         padding: 2px;
         background-color: #fff;
@@ -203,7 +203,7 @@ $title_color: v-bind(mainColor);
       width: 90%;
       font-size: 16px;
 
-      ::v-deep input {
+      ::v-deep(input) {
         background-color: transparent;
         border: none;
         letter-spacing: 0.5px;
