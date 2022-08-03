@@ -1,0 +1,146 @@
+// 整体布局
+.dashboard-container {
+  .el-card {
+    ::v-deep(.el-card__body) {
+      padding-top: 20px;
+    }
+  }
+  .row-container {
+    margin-bottom: 20px;
+  }
+}
+
+// Overview 模块
+.overview-box {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+  color: #494949;
+
+  .left {
+    display: flex;
+    margin: 20px 0 0 20px;
+
+    .overview {
+      margin-left: 7px;
+      .overview-title {
+        font-size: 14px;
+        color: #818181;
+      }
+      .overview-amount {
+        font-size: 34px;
+        font-weight: 600;
+        margin-left: -3px;
+      }
+    }
+  }
+  .right {
+    display: flex;
+  }
+}
+
+.monitor-item {
+  margin: 20px 0px;
+  padding: 0 25px;
+  border-right: 1px solid #ececec;
+  text-align: right;
+
+  .item-title {
+    display: inline-block;
+    font-size: 14px;
+    color: #818181;
+    margin-right: 12px;
+  }
+  .item-content {
+    margin-top: 5px;
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: -2px;
+  }
+}
+.bar-animation {
+  display: inline-block;
+  padding-top: 4px;
+  vertical-align: top;
+}
+
+// Gauge 图表
+.view-more {
+  box-sizing: border-box;
+  height: 50px;
+  border-top: 1px solid #f3f3f4;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #494949;
+  cursor: pointer;
+}
+
+// 日历
+.calendar-container {
+  height: 65vh;
+  .el-card__body {
+    padding-top: 10px;
+  }
+
+  .calendar {
+    .el-calendar__body {
+      padding: 0;
+    }
+    .el-calendar__header {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .el-calendar-table {
+    .el-calendar-day {
+      padding: 0px;
+      height: 60px !important;
+      p {
+        height: 100%;
+        span {
+          display: block;
+          padding-left: 5px;
+          padding-top: 7px;
+        }
+        .day-balance {
+          font-size: 12px;
+        }
+      }
+      .profit {
+        background-color: #f3fff3;
+        & .day-balance {
+          color: #56c596;
+        }
+        &:hover {
+          background-color: #d6f2ff;
+        }
+      }
+      .deficit {
+        background-color: #ffe7e7;
+        & .day-balance {
+          color: #f29292;
+        }
+        &:hover {
+          background-color: #d6f2ff;
+        }
+      }
+      .is-selected {
+        background-color: #d6f2ff;
+      }
+    }
+  }
+}
+
+// 正负柱状图
+.bar-chart-container {
+  height: 65vh;
+  ::v-deep(.el-card__body) {
+    padding: 0 20px;
+  }
+}

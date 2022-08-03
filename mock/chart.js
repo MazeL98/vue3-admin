@@ -8,7 +8,7 @@ const list = []
 let count = 90
 let i = 0
 const generateList = () => {
-  schedule.scheduleJob('0 42 1 * * *', () => {
+  schedule.scheduleJob('0 09 17 * * *', () => {
     const today = dayjs()
     for (i; i < count; i++) {
       list.push(

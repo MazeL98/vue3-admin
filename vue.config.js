@@ -21,6 +21,27 @@ module.exports = {
   },
   configureWebpack: {
     name: 'MazeL-Admin',
+    optimization: {
+      splitChunks: {
+        minSize: 20000,
+        cacheGroups: {
+          // 业务代码公共部分
+          // 第三方库
+          libs: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'chunk-libs',
+            priority: 10,
+            chunks: 'initial'
+          },
+          elementPlus: {
+            test: /[\\/]node_modules[\\/]element-plus/,
+            name: 'chunk-elementPlus',
+            priority: 20,
+            chunks: 'all'
+          }
+        }
+      }
+    },
     plugins: [
       new BundleAnalyzerPlugin(),
       new compressionWebpackPlugin({
