@@ -55,7 +55,9 @@ module.exports = {
     ],
     externals: {
       vue: 'Vue',
-      'element-plus': 'ElementPlus'
+      'element-plus': 'ElementPlus',
+      xlsx: 'xlsx',
+      echarts: 'echarts'
     }
   },
   chainWebpack(config) {

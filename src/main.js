@@ -10,9 +10,6 @@ import installElementPlus from './plugins/element'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import installSvgIcons from './icons/index.js'
 
-// 引入 echarts.js
-// import * as echarts from 'echarts'
-
 // 时间戳转换过滤器
 import installFilter from '@/filter'
 
