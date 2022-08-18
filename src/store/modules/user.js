@@ -52,13 +52,14 @@ const actions = {
    *  退出登录
    */
   logout({ commit }) {
+    resetRouter()
+
     commit('setToken', '')
     commit('setUserInfo', {})
     // 清理所有本地缓存
     removeAllItem()
     // 清除所有路由表
-    resetRouter()
-    router.push('/login')
+    router.push('/login').catch((err) => console.log(err))
   }
 }
 

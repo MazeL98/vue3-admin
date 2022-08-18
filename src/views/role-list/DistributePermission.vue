@@ -37,6 +37,7 @@ import { getAllPermission } from '@/api/permission.js'
 import { getRolePermission, distributePermission } from '@/api/role.js'
 import { ElMessage } from 'element-plus'
 import { useI18n } from 'vue-i18n'
+import { watchLangSwitch } from '@/utils/i18n'
 
 const props = defineProps({
   modelValue: {
@@ -50,27 +51,17 @@ const props = defineProps({
 })
 const emits = defineEmits(['update:modelValue'])
 
-const closed = () => {
-  emits('update:modelValue', false)
-}
-
-const i18n = useI18n()
-const onConfirm = async () => {
-  // 调用分配权限的请求，把roleId和更新的permissionsKeys传给后台
-  await distributePermission({
-    roleId: props.roleId,
-    permissions: treeRef.value.getCheckedKeys()
-  })
-  ElMessage.success(i18n.t('msg.role.updateRoleSuccess'))
-  closed()
-}
-
 // 获取所有权限列表
 const allPermission = ref([])
 const getAllPermissionList = async () => {
   allPermission.value = await getAllPermission()
 }
 getAllPermissionList()
+// 渲染 el-tree
+const defaultProps = {
+  children: 'children',
+  label: 'permissionName'
+}
 
 // 获取指定角色的权限
 const treeRef = ref(null)
@@ -79,6 +70,7 @@ const getPermissionList = async () => {
   // 利用 el-tree 的方法 setCheckedKeys，将角色对应的权限勾选上
   treeRef.value.setCheckedKeys(checkedKeys)
 }
+watchLangSwitch(getAllPermissionList, getPermissionList)
 
 // 监听 props.roleId 变化，重新获取对应权限
 watch(
@@ -90,10 +82,21 @@ watch(
   }
 )
 
-// 渲染 el-tree
-const defaultProps = {
-  children: 'children',
-  label: 'permissionName'
+// 点击确认，更新权限并传给后台
+const i18n = useI18n()
+const onConfirm = async () => {
+  // 调用分配权限的请求，把roleId和更新的permissionsKeys传给后台
+  await distributePermission({
+    roleId: props.roleId,
+    permissions: treeRef.value.getCheckedKeys()
+  })
+  ElMessage.success(i18n.t('msg.role.updateRoleSuccess'))
+  closed()
+}
+
+// 关闭对话框
+const closed = () => {
+  emits('update:modelValue', false)
 }
 </script>
 

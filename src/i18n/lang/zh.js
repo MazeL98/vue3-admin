@@ -13,6 +13,7 @@ export default {
     `
   },
   route: {
+    about: '关于项目',
     dashboard: '仪表盘',
     profile: '个人中心',
     staff: '员工',
@@ -51,7 +52,8 @@ export default {
     lang: '国际化',
     guide: '功能引导',
     home: '首页',
-    profile: '个人中心',
+    sourceCode: '项目源码',
+    blog: '个人博客',
     logout: '退出登录'
   },
   guide: {
@@ -77,18 +79,26 @@ export default {
     sidebarTitle: '菜单',
     sidebarDesc: '项目功能菜单'
   },
-  profile: {
-    muted: '《vue3 改写 vue-element-admin，实现后台前端综合解决方案》项目演示',
+  projectDocs: {
+    muted:
+      '参考 imooc-admin 项目使用 Vue 3.x + Element Plus + Mock.js 对 Vue-Element-Admin 进行前后端重构',
     introduce: '介绍',
     projectIntroduction: '项目介绍',
     projectFeature: '项目功能',
     feature: '功能',
     update: '更新',
-    author: '作者',
-    name: 'Sunday',
-    job: '一个前端开发程序猿',
-    Introduction:
-      '高级技术专家，曾就职于国内一线互联网公司，统筹过的多个大型项目用户数已过千万级。致力于研究大前端技术，多次受邀参加国内前端技术分享会，如：2018 年 Google 中国技术分享会。'
+    docs: '文档'
+  },
+  profile: {
+    meetingTitle: '会议',
+    newBtn: '新建',
+    taskTitle: '任务',
+    projectTitle: '项目',
+    memberTitle: '成员',
+    frontend: '前端开发',
+    backend: '后端开发',
+    completed: '已完成',
+    inProgress: '进行中'
   },
   staffInfo: {
     print: '打印',
@@ -185,6 +195,10 @@ export default {
     lineChartTitle: '近7日营收情况',
     measurement: '万元',
     barChartTitle: '日营收详情',
+    gaugeContent: '预算',
+    gaugeTitle: '收入完成度',
+    gaugeLabel: '收入',
+    viewMore: '查看更多',
     income: '收入',
     expense: '支出',
     balance: '结余'

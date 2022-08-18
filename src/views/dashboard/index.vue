@@ -35,8 +35,11 @@
       </el-col>
       <el-col :span="6">
         <el-card>
-          <gauge></gauge>
-          <div class="view-more">View More</div>
+          <gauge
+            v-if="overviewList.monitorList"
+            :income="overviewList.monitorList.todayIncome"
+          ></gauge>
+          <div class="view-more">{{ $t('msg.dashboard.viewMore') }}</div>
         </el-card>
       </el-col>
     </el-row>

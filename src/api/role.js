@@ -37,6 +37,6 @@ export const distributePermission = (data) => {
   return request({
     url: '/role/distribute-permission',
     method: 'POST',
-    params: data
+    data: data
   })
 }

@@ -48,6 +48,27 @@ const closed = () => {
   emits('update:modelValue', false)
 }
 
+// 先获取所有角色列表
+const allRoles = ref([])
+const getAllRoles = async () => {
+  allRoles.value = await getRoleList()
+}
+getAllRoles()
+
+// 获取当前员工的角色
+const staffRoles = ref([])
+const getStaffRolesList = async () => {
+  const res = await getStaffRoles(props.staffId)
+  staffRoles.value = Object.values(res)
+}
+watchLangSwitch(getAllRoles, getStaffRolesList)
+
+watch(
+  () => props.staffId,
+  (val) => {
+    if (val) getStaffRolesList()
+  }
+)
 const i18n = useI18n()
 const onConfirm = async () => {
   // checkbox绑定数据处理成后台需要的形式
@@ -64,28 +85,6 @@ const onConfirm = async () => {
   emits('updateRole')
   closed()
 }
-
-// 先获取所有角色列表
-const allRoles = ref([])
-const getAllRoles = async () => {
-  allRoles.value = await getRoleList()
-}
-getAllRoles()
-watchLangSwitch(getAllRoles)
-
-// 获取当前员工的角色
-const staffRoles = ref([])
-const getStaffRolesList = async () => {
-  const res = await getStaffRoles(props.staffId)
-  staffRoles.value = Object.values(res)
-}
-
-watch(
-  () => props.staffId,
-  (val) => {
-    if (val) getStaffRolesList()
-  }
-)
 </script>
 
 <style lang="scss" scoped></style>

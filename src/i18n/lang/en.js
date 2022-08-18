@@ -13,6 +13,7 @@ export default {
       `
   },
   route: {
+    about: 'About',
     dashboard: 'Dashboard',
     profile: 'Profile',
     staff: 'Staff',
@@ -50,7 +51,8 @@ export default {
     lang: 'Globalization',
     guide: 'Function Guide',
     home: 'Home',
-    profile: 'My Profile',
+    sourceCode: 'Source Code',
+    blog: 'My Blog',
     logout: 'Log out'
   },
   guide: {
@@ -76,19 +78,26 @@ export default {
     sidebarTitle: 'Menu',
     sidebarDesc: 'Project function menu'
   },
-  profile: {
+  projectDocs: {
     muted:
-      '"Vue3 rewrite vue-element-admin, realize the back-end front-end integrated solution" project demonstration',
+      'Based on imooc-admin, rewrite Vue-Element-Admin with Vue 3.x, Element Plus and Mock.js',
     introduce: 'Introduce',
     projectIntroduction: 'Project Introduction',
     projectFeature: 'Project Feature',
     feature: 'Feature',
     update: 'Update',
-    author: 'Author',
-    name: 'Sunday',
-    job: 'A front-end development program',
-    Introduction:
-      'A senior technical expert, once worked in a domestic first-line Internet company, and has coordinated multiple large-scale projects with more than tens of millions of users. Committed to researching big front-end technology, he has been invited to participate in domestic front-end technology sharing sessions many times, such as: Google China Technology Sharing Session in 2018.'
+    docs: 'Docs'
+  },
+  profile: {
+    meetingTitle: 'Meeting',
+    newBtn: 'New+',
+    taskTitle: 'Task',
+    projectTitle: 'Project',
+    memberTitle: 'Member',
+    frontend: 'Frontend Developer',
+    backend: 'Backend Developer',
+    completed: 'Completed',
+    inProgress: 'In progress'
   },
   staffInfo: {
     print: 'Print',
@@ -185,6 +194,10 @@ export default {
     lineChartTitle: 'Revenue in the last seven days',
     measurement: '10k CNY',
     barChartTitle: 'Daily Profit',
+    gaugeTitle: '% of Income Budget',
+    gaugeContent: 'Budget',
+    gaugeLabel: 'Income',
+    viewMore: 'View More',
     income: 'Income',
     expense: 'Expense',
     balance: 'Balance'

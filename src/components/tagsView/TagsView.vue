@@ -137,16 +137,6 @@ const hoverTagColor = computed(() => {
     &.active {
       background-color: v-bind(hoverTagColor);
       color: white;
-      &::before {
-        display: inline-block;
-        content: ' ';
-        position: relative;
-        width: 8px;
-        height: 8px;
-        background-color: #fff;
-        border-radius: 50%;
-        margin-right: 4px;
-      }
     }
   }
   .close-icon-wrapper {
@@ -157,9 +147,9 @@ const hoverTagColor = computed(() => {
       position: relative;
       top: 2px;
       & .tag-close-icon {
-        width: 16px;
-        height: 16px;
-        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        width: 15px;
+        height: 15px;
+        transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
         transform-origin: 100% 50%;
       }
     }

@@ -30,7 +30,9 @@
               class="staff-avatar"
               :src="row.avatar"
               :preview-src-list="[row.avatar]"
+              z-index="99"
               style="width: 60px, height:60px"
+              preview-teleported="true"
           /></template>
         </el-table-column>
         <el-table-column :label="$t('msg.excel.role')">

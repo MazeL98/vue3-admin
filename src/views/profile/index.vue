@@ -2,48 +2,33 @@
 <template>
   <div class="profile-container">
     <el-row>
-      <el-col :span="6">
-        <project-card :feature="featureData"></project-card>
+      <el-col :span="6" class="left-col">
+        <user-info></user-info>
+        <meeting></meeting>
       </el-col>
-      <el-col :span="18">
-        <el-card class="profile-card">
-          <el-tabs v-model="activeName" class="profile-tabs">
-            <el-tab-pane :label="$t('msg.profile.feature')" name="feature">
-              <feature :feature="featureData"></feature>
-            </el-tab-pane>
-            <el-tab-pane :label="$t('msg.profile.update')" name="update">
-              <update-log></update-log>
-            </el-tab-pane>
-            <el-tab-pane :label="$t('msg.profile.author')" name="author">
-              <author></author>
-            </el-tab-pane>
-          </el-tabs>
-        </el-card>
+      <el-col :span="12" class="mid-col">
+        <my-task></my-task>
+      </el-col>
+      <el-col :span="6">
+        <project></project>
+        <member></member>
       </el-col>
     </el-row>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import ProjectCard from './components/ProjectCard.vue'
-import Feature from './components/Feature.vue'
-import UpdateLog from './components/UpdateLog.vue'
-import Author from './components/Author.vue'
-import { getFeature } from '@/api/app.js'
-import { watchLangSwitch } from '@/utils/i18n.js'
-// 默认标签页
-const activeName = ref('feature')
-
-// 获取接口数据
-const featureData = ref([])
-const getFeatureData = async () => {
-  featureData.value = await getFeature()
-}
-getFeatureData()
-
-// 监听语言变化重新获取数据
-watchLangSwitch(getFeatureData)
+import {} from 'vue'
+import UserInfo from './components/UserInfo.vue'
+import MyTask from './components/MyTask.vue'
+import Project from './components/Project.vue'
+import Meeting from './components/Meeting.vue'
+import Member from './components/Member.vue'
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.left-col,
+.mid-col {
+  padding-right: 20px;
+}
+</style>

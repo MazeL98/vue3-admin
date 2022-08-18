@@ -17,7 +17,6 @@ const actions = {
     menus.forEach((key) => {
       routes.push(...privateRoutes.filter((item) => item.name === key))
     })
-
     commit('setRoutes', routes)
     return routes
   }

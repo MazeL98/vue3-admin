@@ -53,7 +53,7 @@ const toggleSidebarWidth = () => {
   overflow: hidden;
   width: $sidebarWidth;
   height: 100%;
-  z-index: 10001;
+  z-index: 1111;
 }
 
 .collapsedSidebar {

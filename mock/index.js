@@ -1,19 +1,17 @@
-const express = require('express')
+import express from 'express'
+import bodyParser from 'body-parser'
 
 const port = process.env.PORT || 3000
 
 const app = express()
 
-const bodyParser = require('body-parser')
-
 // 引入自定义的 mock API
-const appRouter = require('./router/app')
-const sys = require('./router/sys')
-const staffManage = require('./router/staff-manage')
-const permission = require('./router/permission')
-const role = require('./router/role')
-const article = require('./router/article')
-const chart = require('./router/chart')
+import sys from './router/sys.js'
+import staffManage from './router/staff-manage.js'
+import permission from './router/permission.js'
+import role from './router/role.js'
+import article from './router/article.js'
+import chart from './router/chart.js'
 
 app.use(bodyParser.json())
 
@@ -28,7 +26,7 @@ app.all('*', function (req, res, next) {
   )
   next()
 })
-app.use('/app', appRouter)
+
 app.use('/sys', sys)
 app.use('/staff-manage', staffManage)
 app.use('/permission', permission)

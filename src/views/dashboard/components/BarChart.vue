@@ -7,9 +7,9 @@
 
 <script setup>
 import { ref, onMounted, defineProps, watch } from 'vue'
+// echarts.js 按需引入
 import * as echarts from 'echarts/core'
 import { BarChart } from 'echarts/charts'
-
 import { CanvasRenderer } from 'echarts/renderers'
 import {
   TitleComponent,

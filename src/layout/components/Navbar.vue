@@ -30,12 +30,19 @@
           </div>
           <template #dropdown>
             <el-dropdown-menu>
-              <el-dropdown-item command="/">{{
-                $t('msg.navBar.home')
-              }}</el-dropdown-item>
-              <el-dropdown-item command="/profile">{{
-                $t('msg.navBar.profile')
-              }}</el-dropdown-item>
+              <router-link to="/">
+                <el-dropdown-item>{{
+                  $t('msg.navBar.home')
+                }}</el-dropdown-item></router-link
+              >
+              <a target="_blank" href="https://github.com/MazeL98/vue3-admin">
+                <el-dropdown-item>{{
+                  $t('msg.navBar.sourceCode')
+                }}</el-dropdown-item>
+              </a>
+              <a target="_blank" href="http://www.mazel98.com">
+                <el-dropdown-item>{{ $t('msg.navBar.blog') }}</el-dropdown-item>
+              </a>
               <el-dropdown-item divided @click="logout">{{
                 $t('msg.navBar.logout')
               }}</el-dropdown-item>
@@ -49,7 +56,6 @@
 
 <script setup>
 import {} from 'vue'
-import router from '@/router'
 import store from '@/store'
 import Hamburger from '@/components/Hamburger.vue'
 import Breadcrumb from '@/components/Breadcrumb.vue'
@@ -58,9 +64,7 @@ import HeaderSearch from '@/components/HeaderSearch.vue'
 import LangSelect from '@/components/LangSelect.vue'
 import ThemeSelect from '@/components/themeSelect/index.vue'
 import Fullscreen from '@/components/Fullscreen.vue'
-const handleCommand = (command) => {
-  router.push(command)
-}
+
 const logout = () => {
   store.dispatch('user/logout')
 }
@@ -94,34 +98,35 @@ const logout = () => {
 
     .right-item {
       float: left;
-      padding: 0 10px;
+      padding: 0 8px;
       cursor: pointer;
     }
 
     .guide {
       ::v-deep(.guide-icon) {
-        font-size: 24px;
+        padding-top: 2px;
+        font-size: 25px;
         vertical-align: middle;
       }
     }
 
     .header-search {
       ::v-deep(.header-search-icon) {
-        font-size: 20px;
+        font-size: 21px;
         vertical-align: middle;
       }
     }
     .fullscreen {
       ::v-deep(.fullscreen-icon) {
-        font-size: 24px;
-
+        font-size: 18px;
+        padding-top: 1px;
         vertical-align: middle;
         color: currentColor;
       }
     }
     .theme-select {
       ::v-deep(.theme-change-icon) {
-        font-size: 24px;
+        font-size: 20px;
         vertical-align: middle;
       }
     }

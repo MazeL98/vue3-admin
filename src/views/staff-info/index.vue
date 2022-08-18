@@ -2,11 +2,11 @@
 <template>
   <div class="">
     <el-card class="print-button-box">
-      <el-button type="primary" :loading="printLoading">{{
+      <el-button type="primary" :loading="printLoading" v-print="printObj">{{
         $t('msg.staffInfo.print')
       }}</el-button>
     </el-card>
-    <el-card id="staffInfoBox" class="staff-info-box" v-print="printObj">
+    <el-card id="staffInfoBox" class="staff-info-box">
       <div class="info-title">
         <h2 style="text-align: center">{{ $t('msg.staffInfo.title') }}</h2>
       </div>

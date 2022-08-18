@@ -13,6 +13,7 @@
     <el-select
       ref="headerSearchSelectRef"
       class="header-search-select"
+      id="header-search-select"
       v-model="search"
       filterable
       remote
@@ -114,6 +115,15 @@ const onSelectChange = (value) => {
 </script>
 
 <style lang="scss" scoped>
+.header-search-container {
+  ::v-deep(.el-select) {
+    .el-input.is-focus {
+      .el-input__wrapper {
+        box-shadow: 0 0 0 0 !important;
+      }
+    }
+  }
+}
 .header-search-select {
   display: inline-block;
   width: 0;
@@ -137,7 +147,7 @@ const onSelectChange = (value) => {
 .show {
   ::v-deep(.header-search-select) {
     width: 210px;
-    margin-left: 10px;
+    margin-left: 0px;
   }
 }
 </style>

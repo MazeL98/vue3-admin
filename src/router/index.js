@@ -17,8 +17,17 @@ export const publicRoutes = [
   {
     path: '/',
     component: layout,
-    redirect: '/profile',
+    redirect: '/about',
     children: [
+      {
+        path: '/about',
+        name: 'about',
+        component: () => import('@/views/about-project/index'),
+        meta: {
+          title: 'about',
+          icon: 'doc'
+        }
+      },
       {
         path: '/profile',
         name: 'profile',

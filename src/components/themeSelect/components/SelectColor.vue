@@ -85,6 +85,7 @@ const handleDefault = async () => {
 @import '@/styles/variables.scss';
 .theme-tip {
   cursor: pointer;
+  margin-top: 20px;
   font-size: 12px;
   line-height: 20px;
   &:hover {

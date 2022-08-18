@@ -6,8 +6,8 @@
     "build": "cross-env NODE_ENV=production vue-cli-service build",
     "lint": "vue-cli-service lint",
     "prepare": "husky install",
-    "mock": "cross-env NODE_ENV=development concurrently \"vue-cli-service serve\" \"node ./mock/index.js\"",
-    "mocko": "cross-env NODE_ENV=development node ./mock/index.js"
+    "mock": "cross-env NODE_ENV=development concurrently \"vue-cli-service serve\" \"node --experimental-modules --es-module-specifier-resolution=node ./mock/index.js\"",
+    "mocko": "cross-env NODE_ENV=development node --experimental-modules --es-module-specifier-resolution=node  ./mock/index.js "
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.0.6",
@@ -37,6 +37,8 @@
     "xlsx": "^0.17.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
     "@vue/cli-plugin-babel": "~4.5.13",
