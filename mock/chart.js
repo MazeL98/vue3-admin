@@ -5,7 +5,7 @@ import schedule from 'node-schedule'
 
 // 90天每日营收数据
 let list = []
-let count = 90
+const count = 90
 let i = 0
 
 // 初次生成数据列表
@@ -107,6 +107,7 @@ const generateList = () => {
   schedule.scheduleJob('0 2 0 * * *', () => {
     today = dayjs()
     list = []
+    i = 0
     for (i; i < count; i++) {
       list.push(
         Mock.mock({

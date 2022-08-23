@@ -11,7 +11,7 @@
           <el-avatar
             shape="circle"
             :size="40"
-            src="http://rfsjnlrct.hn-bkt.clouddn.com/zoom-transparent.png"
+            src="http://qiniuyun.mazel98.com/zoom-transparent.png"
           ></el-avatar>
         </div>
         <div class="right">
@@ -25,21 +25,21 @@
               <el-avatar
                 shape="circle"
                 :size="25"
-                src="http://rfsjnlrct.hn-bkt.clouddn.com/avatar.png"
+                src="http://qiniuyun.mazel98.com/avatar.png"
                 fit="contain"
               ></el-avatar>
               <el-avatar
                 shape="circle"
                 :size="25"
                 class="member-item"
-                src="http://rfsjnlrct.hn-bkt.clouddn.com/avatar.png"
+                src="http://qiniuyun.mazel98.com/avatar.png"
                 fit="cover"
               ></el-avatar>
               <el-avatar
                 shape="circle"
                 :size="25"
                 class="member-item"
-                src="http://rfsjnlrct.hn-bkt.clouddn.com/avatar.png"
+                src="http://qiniuyun.mazel98.com/avatar.png"
                 fit="cover"
               ></el-avatar>
             </div>
@@ -51,7 +51,7 @@
           <el-avatar
             shape="circle"
             :size="40"
-            src="http://rfsjnlrct.hn-bkt.clouddn.com/zoom-transparent.png"
+            src="http://qiniuyun.mazel98.com/zoom-transparent.png"
           ></el-avatar>
         </div>
         <div class="right">
@@ -65,21 +65,21 @@
               <el-avatar
                 shape="circle"
                 :size="25"
-                src="http://rfsjnlrct.hn-bkt.clouddn.com/avatar.png"
+                src="http://qiniuyun.mazel98.com/avatar.png"
                 fit="contain"
               ></el-avatar>
               <el-avatar
                 shape="circle"
                 :size="25"
                 class="member-item"
-                src="http://rfsjnlrct.hn-bkt.clouddn.com/avatar.png"
+                src="http://qiniuyun.mazel98.com/avatar.png"
                 fit="cover"
               ></el-avatar>
               <el-avatar
                 shape="circle"
                 :size="25"
                 class="member-item"
-                src="http://rfsjnlrct.hn-bkt.clouddn.com/avatar.png"
+                src="http://qiniuyun.mazel98.com/avatar.png"
                 fit="cover"
               ></el-avatar>
             </div>
@@ -91,7 +91,7 @@
           <el-avatar
             shape="circle"
             :size="40"
-            src="http://rfsjnlrct.hn-bkt.clouddn.com/zoom-transparent.png"
+            src="http://qiniuyun.mazel98.com/zoom-transparent.png"
           ></el-avatar>
         </div>
         <div class="right">
@@ -105,21 +105,21 @@
               <el-avatar
                 shape="circle"
                 :size="25"
-                src="http://rfsjnlrct.hn-bkt.clouddn.com/avatar.png"
+                src="http://qiniuyun.mazel98.com/avatar.png"
                 fit="contain"
               ></el-avatar>
               <el-avatar
                 shape="circle"
                 :size="25"
                 class="member-item"
-                src="http://rfsjnlrct.hn-bkt.clouddn.com/avatar.png"
+                src="http://qiniuyun.mazel98.com/avatar.png"
                 fit="cover"
               ></el-avatar>
               <el-avatar
                 shape="circle"
                 :size="25"
                 class="member-item"
-                src="http://rfsjnlrct.hn-bkt.clouddn.com/avatar.png"
+                src="http://qiniuyun.mazel98.com/avatar.png"
                 fit="cover"
               ></el-avatar>
             </div>

@@ -9,7 +9,7 @@
         <el-avatar
           shape="circle"
           :size="50"
-          src="http://rfsjnlrct.hn-bkt.clouddn.com/avatar.png"
+          src="http://qiniuyun.mazel98.com/avatar.png"
         ></el-avatar>
         <div class="item-content">
           <div class="item-name">Jake</div>
@@ -26,7 +26,7 @@
         <el-avatar
           shape="circle"
           :size="50"
-          src="http://rfsjnlrct.hn-bkt.clouddn.com/avatar.png"
+          src="http://qiniuyun.mazel98.com/avatar.png"
         ></el-avatar>
         <div class="item-content">
           <div class="item-name">Peralta</div>
@@ -43,7 +43,7 @@
         <el-avatar
           shape="circle"
           :size="50"
-          src="http://rfsjnlrct.hn-bkt.clouddn.com/avatar.png"
+          src="http://qiniuyun.mazel98.com/avatar.png"
         ></el-avatar>
         <div class="item-content">
           <div class="item-name">Boyle</div>
